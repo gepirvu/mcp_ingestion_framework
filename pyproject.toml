@@ -1,0 +1,45 @@
+[project]
+name = "mcp-data-ingestion"
+version = "0.1.0"
+description = "MCP-driven intelligent data ingestion pipeline"
+requires-python = ">=3.11"
+dependencies = [
+    "databricks-sql-connector>=3.0.0",
+    "boto3>=1.34.0",
+    "pandas>=2.0.0",
+    "pyarrow>=15.0.0",
+    "deltalake>=0.15.0",
+    "openai>=1.0.0",
+    "azure-storage-blob>=12.19.0",
+    "azure-data-tables>=12.4.0",
+    "pydantic>=2.0.0",
+    "asyncio-throttle>=1.0.0",
+    "tenacity>=8.0.0",
+    "structlog>=23.0.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
