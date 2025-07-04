@@ -185,3 +185,4 @@ cython_debug/
 week1/vector_db/
 /week1/knowledge-base/terraform_modules/
 assignments/week2/vector_db/
+uv.lock
